@@ -1,10 +1,21 @@
-package com.sanpetch.cosmetic.api;
+package com.sanpetch.cosmetic.api.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Cosmetic {
 
+@Id @GeneratedValue(strategy = GenerationType.IDENTITY)        
 private String id;
 private String name;
 private int    amount;
+
+public Cosmetic(){
+
+}
 
 public Cosmetic(String id, String name, int amount){
         this.id = id;
