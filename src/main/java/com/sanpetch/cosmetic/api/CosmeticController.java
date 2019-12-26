@@ -28,7 +28,7 @@ public class CosmeticController {
         return cosmetics;
     }
 
-    @RequestMapping(value = "/cosmetics/delete={id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/cosmetics/delete={id}", method = RequestMethod.GET)
     public void deleteCosmetics(@PathVariable String id) {
         for(int i = 0; i < cosmetics.size(); i++){
             if (cosmetics.get(i).getId().equals(id)){
